@@ -53,23 +53,18 @@ const exo4 = (array) => {
 // console.log(exo4([3, 7, 8, 3, 6, 1, 2]));
 
 const exo5 = (n, arr) => {
-   // arr.some((item, i) => arr.slice(i + 1).includes(n - item));
  return arr.some((item) => arr.includes(n-item))
 }
 // console.log(exo5(17, [23, 10, 3, 7]));
 
 const exo6 = (array) => {
-    let count = 0;
-    let result = 1;
-    let num_max = array[array.length - 1];
-    for (let i = array.length - 1; i >= 1; i--) {
-      count++;
-      if (array[i] > num_max) {
-        result++;
-        num_max = array[i];
-      }
-    }
-    return [result, count];
+  let arr = [];
+  let newarray = array.slice(array.indexOf(Math.max(...array)));
+  for (let i = 0; i < newarray.length; i++) {
+    if(newarray[i] > newarray[i + 1])arr.push(newarray[i])
+  }
+  return arr.length + 1
+
 }
 
-console.log(exo6([3, 7, 8, 3, 6, 1, 2]))
+console.log(exo6([3, 7, 8, 3, 6, 22, 33, 42, 3]))
