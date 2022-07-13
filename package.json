@@ -1,0 +1,19 @@
+{
+  "name": "algorithm_de_tri",
+  "version": "1.0.0",
+  "description": "Algo",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algo"
+  ],
+
+  "bin": {  
+    "trin": "./bin/index.js"  
+  },
+
+  "author": "Joff",
+  "license": "ISC"
+}
